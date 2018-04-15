@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-box">
+            <h1>ENTER BPM</h1><br>
+            <input type="text" id="og-bpm" value="">
+            <input type="range" name="rangeInput" min="-8" max="8" animate="true" id="slider" step=".1" oninput="updateTextInput(this.value), calculateBpm()">
+            <label class="slider-label" for="slider">
+                <span class="min">-8</span>
+                <span class="max">8</span>
+            </label>
+            <input type="text" id="percent" value="0" readonly />
+            <!-- <p>NEW BPM</p><br> -->
+            <input type="text" id="new-bpm" readonly />
+            <!-- <p>OG SPEED</p><br>
+            <input type="text" id="og-speed" value=""> -->
+            <h2>45@33.3</h2><br>
+            <input type="text" id="new-speed" value="">
+            
+            
+        </div>
+    </div>
+        
+    <script src="js/main.js"></script>
+</body>
+
+
+
+</html>
