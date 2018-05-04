@@ -9,19 +9,21 @@
     <div class="container">
         <div class="main-box">
             <h1>ENTER BPM</h1><br>
-            <input type="text" id="og-bpm" value="">
-            <input type="range" name="rangeInput" min="-8" max="8" animate="true" id="slider" step=".1" oninput="updateTextInput(this.value), calculateBpm()">
-            <label class="slider-label" for="slider">
-                <span class="min">-8</span>
-                <span class="max">8</span>
-            </label>
+            <input type="number" pattern="\d*" id="og-bpm" value="">
+            <div class="slider-box">
+                    <input type="range" name="rangeInput" min="-8" max="8" animate="true" id="slider" step=".1" oninput="updateTextInput(this.value), calculateBpm()">
+                <label class="slider-label" for="slider">
+                    <span class="min">-8</span>
+                    <span class="max">8</span>
+                </label>
+            </div>
             <input type="text" id="percent" value="0" readonly />
             <!-- <p>NEW BPM</p><br> -->
             <input type="text" id="new-bpm" readonly />
             <!-- <p>OG SPEED</p><br>
             <input type="text" id="og-speed" value=""> -->
-            <h2>45@33.3</h2><br>
-            <input type="text" id="new-speed" value="">
+            <!-- <h2>45@33.3</h2><br> -->
+            <input type="text" id="new-speed" readonly value="">
             
             
         </div>

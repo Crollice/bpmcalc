@@ -29,11 +29,11 @@ function calculateBpm() {
 
     console.log(slowBpm);
     newBpm.value = mainCalc;
-    newSpeedField.value = slowBpm;
+    newSpeedField.value = slowBpm.toFixed(2);
     
 }
 
-projectPercent.addEventListener('click', currentBpm, middleThumb);
+projectPercent.addEventListener('click', currentBpm);
 
 function currentBpm() {
     newBpm.value = ogBpm.value;
@@ -41,10 +41,6 @@ function currentBpm() {
     console.log('test');
 }
 
-function middleThumb() {
-    projectPercent.value = 0;
-    console.log('test');
-}
 
 
 
