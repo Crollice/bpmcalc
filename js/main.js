@@ -21,6 +21,7 @@ function calculateBpm() {
     // var sliderSmall = sliderValue * pointOhOne;
     var firstCalc = enteredBpm * sliderValue.toFixed(3);
     var mainCalc = parseFloat(firstCalc) + parseFloat(enteredBpm);
+    
 
     var recordSpeed = parseFloat(mainCalc) / 45;
     var slowBpm = parseFloat(recordSpeed) * 33.3;
@@ -28,7 +29,7 @@ function calculateBpm() {
 
 
     console.log(slowBpm);
-    newBpm.value = mainCalc;
+    newBpm.value = mainCalc.toFixed(2);
     newSpeedField.value = slowBpm.toFixed(2);
     
 }
