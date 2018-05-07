@@ -17,8 +17,6 @@ function updateTextInput(val) {
 function calculateBpm() {
     var sliderValue = projectPercent.value * .01;
     var enteredBpm = ogBpm.value;
-    // var pointOhOne = .01;
-    // var sliderSmall = sliderValue * pointOhOne;
     var firstCalc = enteredBpm * sliderValue.toFixed(3);
     var mainCalc = parseFloat(firstCalc) + parseFloat(enteredBpm);
     
@@ -26,11 +24,26 @@ function calculateBpm() {
     var recordSpeed = parseFloat(mainCalc) / 45;
     var slowBpm = parseFloat(recordSpeed) * 33.3;
 
+    var removeNanMainCalc = () => {
+        if ( isNaN(mainCalc) ) {
+            return null;
+        }
+        else {
+            return mainCalc.toFixed(2);
+        }
+    }
 
+    var removeNanSlowBpm = () => {
+        if ( isNaN(slowBpm) ) {
+            return null;
+        }
+        else {
+            return slowBpm.toFixed(2);
+        }
+    }
 
-    console.log(slowBpm);
-    newBpm.value = mainCalc.toFixed(2);
-    newSpeedField.value = slowBpm.toFixed(2);
+    newBpm.value = removeNanMainCalc();
+    newSpeedField.value = removeNanSlowBpm();
     
 }
 
